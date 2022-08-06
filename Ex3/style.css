@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.heading{
+    width:100%;
+    height:50px;
+    background-color: darkblue;
+    padding: 1%;
+}
+
+.heading h1{
+    color: white;
+}
+
+.about-us{
+    align-items: center;
+    width: 100%;
+    background-color: antiquewhite;
+    
+}
+
+.about-us h2{
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.about-us p{
+    background-color: antiquewhite;
+    float: left;
+}
+
+.course{
+    display:flex;
+    width:100%
+    
+}
+
+.course .image1{
+    background-image: url('https://www.sharda.ac.in/blog/wp-content/uploads/2020/03/Image-1.jpg');
+    width: 33.333333%;
+    height: 250px;
+}
+
+.course .image2{
+    background-image: url('https://s28151.pcdn.co/library/wp-content/uploads/sites/88/2020/11/goddard-library-renew-a-book.jpg');
+    width: 33.333333%;
+    height: 250px;
+}
+
+.course .image3{
+    background-image: url('https://www.yourfreecareertest.com/wp-content/uploads/2017/07/biological_technician.jpg');
+    width: 33.333333%;
+    height: 250px;
+}
+
+.course .image1 .cse{
+    width: 100%;
+    height:50px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.course .image2 .library{
+    width: 100%;
+    height:50px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 200px;
+}
+
+.course .image3 .biotech{
+    width: 100%;
+    height:50px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.info{
+    display: flex;
+    width:100%;
+}
+
+.info .campus{
+    padding: 0%;
+    width:50%;
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+.info .image4{
+    background-image: url('http://www.excellence-initiative.com/wp-content/uploads/2020/05/featured-image-1.jpg');
+    width:50%;
+}
+
+.layer4{
+    display: flex;
+    width:100%;
+}
+
+.layer4 .forms{
+    background-image: url('https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    width:50%
+
+}
+
+.layer4 .forms .form{
+    width: 50%;
+    margin: 6%;
+    padding: 6%;
+    background-color: aliceblue;
+    align-items: center;
+
+}
+
+.layer4 .forms .form form input[type=text]{
+    width:50%;
+    padding: 2%;
+    margin: 15px;
+    border: 2px solid blue;
+    border-radius: 4px;
+}
+.layer4 .forms .form form input[type=submit]{
+    width:50%;
+    padding: 2%;
+    margin: 15px;
+    border: 2px solid blue;
+    border-radius: 4px;
+}
+
+.layer4 .forms .form form label{
+    width:50%;
+    padding: 2%;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.layer4 .drone{
+    width:50%;
+    text-align: left;
+    background-color: antiquewhite;
+}
