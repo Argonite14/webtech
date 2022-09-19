@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        *{
+            margin: 0;
+        }
+
+        body{
+            background-image: url("flat-geometric-background_23-2148957209.webp");
+            font-family: 'Silkscreen', cursive;
+        }
+
+        .heading{
+            inline-size: 100%;
+            block-size: 60px;
+            padding-top: 1.5%;
+            background-color: rgba(0,0,0,0.5);
+            color: aliceblue;
+            text-align: center;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li{
+            float: left;
+            margin-left: 7%;
+        }
+
+        li button{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: #333;
+        }
+
+        
+
+        .calci{
+            width: 50%;
+            height: 500px;
+            background-color: rgba(0,0,0,0.5);
+            margin: 0  auto;
+            margin-top: 5%;
+            text-align: center;
+            padding: 0 auto;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .calci label{
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .calci input[type=text] {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box
+        }
+
+        .calci select {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box
+        }
+
+        .form{
+            width: 50%;
+            height: 500px;
+            background-color: rgba(0,0,0,0.5);
+            margin: 0  auto;
+            margin-top: 5%;
+            text-align: center;
+            padding: 0 auto;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .form label{
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .form input[type=text] {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box
+        }
+
+        .form select {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box
+        }
+
+
+        
+    </style>
+    <script>
+        function add(){
+            let num1 = document.getElementById('in1cal').value;
+            let num2 = document.getElementById('in2cal').value;
+            var result = 0;
+
+            result = parseFloat(num1) + parseFloat(num2);
+
+            
+            document.getElementById('result2').innerHTML = result;
+            
+        }
+
+        function sub(){
+            let num1 = document.getElementById('in1cal').value;
+            let num2 = document.getElementById('in2cal').value;
+            var result = 0;
+
+            result = parseFloat(num1) - parseFloat(num2);
+
+            
+            document.getElementById('result2').innerHTML = result;
+            
+        }
+
+        function mul(){
+            let num1 = document.getElementById('in1cal').value;
+            let num2 = document.getElementById('in2cal').value;
+            var result = 0;
+
+            result = parseFloat(num1) * parseFloat(num2);
+
+            
+            document.getElementById('result2').innerHTML = result;
+            
+        }
+
+        function div(){
+            let num1 = document.getElementById('in1cal').value;
+            let num2 = document.getElementById('in2cal').value;
+            var result = 0;
+
+            result = parseFloat(num1) / parseFloat(num2);
+
+            
+            document.getElementById('result2').innerHTML = result;
+            
+        }
+        function convert(){
+            var amount = document.getElementById('in1').value;
+            var currencyin = document.getElementById('curin').value;
+            var currencyout = document.getElementById('curout').value;
+            var result = 0;
+
+            switch(currencyin){
+                case "USD":
+                switch(currencyout){
+                    case "USD":
+                        result = amount;
+                        break;
+                    case "INR":
+                        result = amount*79;
+                        break;
+                    case "JPY":
+                        result = amount*138;
+                }
+                break;
+                case "INR":
+                switch(currencyout){
+                    case "USD":
+                        result = amount*0.013;
+                        break;
+                    case "INR":
+                        result = amount;
+                        break;
+                    case "JPY":
+                        result = amount*1.74;
+                        break;
+                }
+                break;
+                case "JPY":
+                switch(currencyout){
+                    case "USD":
+                        result = amount*0.0072;
+                        break;
+                    case "INR":
+                        result = amount*0.57;
+                        break;
+                    case "JPY":
+                        result = amount;
+                        break;
+                }
+                break;
+
+            }
+
+            
+            document.getElementById('result').innerHTML = result
+            
+        }
+        function bmi(){
+            var weight = document.getElementById("in1bmi").value;
+            var height = document.getElementById("in2bmi").value;
+
+            var result = parseFloat(weight)/parseFloat(height)*parseFloat(height);
+            document.getElementById("resultbmi").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <h1>JAVA STUFF</h1>
+    </div>
+
+    <div class="form">
+        <h4>CURRENCY CONVERTER</h4>
+        AMOUNT:<input type="text" id="in1" onkeyup="convert()"><br>
+        FROM:<select name="cur" id="curin" onchange="convert()">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+        </select><br>
+        TO:<select name="cur" id="curout" onchange="convert()">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+        </select><br>
+        RESULT:<p id="result"></p>
+        
+        
+    </div>
+
+    <div class="calci">
+        <h4>CALCULATOR</h4>
+        <hr>
+        <input type="text" id="in1cal">
+        <input type="text" id="in2cal">
+        <br>
+        
+        <ul>
+            <li>
+                <button id="add" onclick="add()">ADDITION</button>
+            </li>
+            <li>
+                <button id="sub" onclick="sub()">SUBTRACTION</button>
+            </li>
+            <li>
+                <button id="mul" onclick="mul()">MULTIPLICATION</button>
+            </li>
+            <li>
+                <button id="div" onclick="div()">DIVISION</button>
+            </li>
+        </ul>
+       
+        
+        RESULT:<hr><p id="result2"></p>
+        
+        
+    </div>
+    <div class="calci">
+        <h4>CALCULATOR</h4>
+        <hr>
+        WEIGHT:<input type="text" id="in1bmi" onkeyup="bmi()">kg<br>
+        HEIGHT:<input type="text" id="in2bmi" onkeyup="bmi()">cm
+        <br>
+        RESULT:<hr><p id="resultbmi"></p>
+
+
+    </div>
+    
+</body>
+</html>
+
+<!-- onClick (button) -->
+<!-- onChnage (select)-->
+<!-- onKeyup (input type = text) -->
