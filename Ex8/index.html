@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("control",function($scope){
+            $scope.grade = function(){
+                var name = $scope.name
+                var regno = $scope.regno
+                var c1 = parseInt($scope.c1)
+                var c2 = parseInt($scope.c2)
+                var c3 = parseInt($scope.c3)
+                var c4 = parseInt($scope.c4)
+                var c5 = parseInt($scope.c5)
+                var avg = (c1 + c2 + c3 + c4 + c5)/5;
+                var grade;
+                if (avg >= 95){
+                    grade = "S"
+                }
+                else if (avg >= 80 && avg < 95){
+                    grade = "A"
+                }
+                else if (avg >= 70 && avg < 80){
+                    grade = "B"
+                }
+                else if (avg >=60 && avg < 70){
+                    grade = "c"
+                }
+                else if (avg >= 50 && avg < 60){
+                    grade = "D"
+                } 
+                else{
+                    grade = "F"
+                }
+                $scope.name = name
+                $scope.RegNo = regno
+                $scope.view = "Average " + avg
+                $scope.view2 = "Grade " + grade
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="control">
+    <div class="heading">
+        My College
+    </div>
+
+    <div class="form">
+        <p class="grade">Grade Evaluation</p>
+        <form>
+            <label for="std-name">Student Name</label><br>
+            <input type="text" ng-model="name" name="" id="std-name"><br>
+            <label for="std-regno">Student RegNo</label><br>
+            <input type="text" ng-model="regno" name="" id="std-regno"><br>
+            <label for="c1">Course 1 Marks</label><br>
+            <input type="text" ng-model="c1" id="c1"><br>
+            <label for="c2">Course 2 Marks</label><br>
+            <input type="text" ng-model="c2" id="c2"><br>
+            <label for="c3">Course 3 Marks</label><br>
+            <input type="text" ng-model="c3" id="c3"><br>
+            <label for="c4">Course 4 Marks</label><br>
+            <input type="text" ng-model="c4" id="c4"><br>
+            <label for="c5">Course 5 Marks</label><br>
+            <input type="text" ng-model="c5" id="c5"><br>
+        </form>
+        <button style="margin:2%" ng-click="grade()">find grade</button>
+        <h1 style="margin: 1%;">{{name}}</h1>
+        <h1 style="margin: 1%;" ng-bind="RegNo"></h1>
+        <h1 style="margin: 1%;" ng-bind="view"></h1>
+        <h1 style="margin: 1%;" ng-bind="view2"></h1>
+    </div>
+</body>
+</html>
+
+<!-- ng-bind="name" -->

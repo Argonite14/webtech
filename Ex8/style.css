@@ -1,0 +1,27 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.heading{
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.grade{
+    color: red;
+    font-size: 1.5rem;
+    margin: 2%;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+    color: blue;
+}
+

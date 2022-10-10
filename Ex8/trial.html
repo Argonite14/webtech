@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("control",function($scope){
+            $scope.grade = function(){
+                var c1 = parseFloat($scope.c1)
+                var c2 = parseFloat($scope.c2)
+               
+                var BMI = c1/(c2*c2);
+               
+                $scope.name = BMI
+               
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="control">
+
+    <div class="form">
+        <form>
+            <label for="c1">weight(kg)</label><br>
+            <input type="text" ng-model="c1" id="c1"><br>
+            <label for="c2">height(m)</label><br>
+            <input type="text" ng-model="c2" id="c2"><br>
+            
+        </form>
+        <button style="margin:2%" ng-click="grade()">BMI</button>
+        <h1 style="margin: 1%;">{{c1/(c2*c2)}}</h1>
+        
+    </div>
+</body>
+</html>
+
+<!-- ng-bind="name" -->

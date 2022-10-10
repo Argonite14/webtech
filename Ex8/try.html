@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("control",function($scope){
+            $scope.add = function(){
+                var n1 = parseInt($scope.n1)
+                var n2 = parseInt($scope.n2)
+                var sum = n1 + n2;
+                $scope.view = "sum " + sum
+            }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="control">
+    Number 1: <input type="text" ng-model="n1" ng-keyup="add()"><br>
+    Number 2: <input type="text" ng-model="n2" ng-keyup="add()"><br>
+    <button ng-click="add()">Add</button>
+    <div ng-bind="view"></div>
+
+</body>
+</html>
+
+<!-- angular
+-module
+-controller
+-directive 
+ng-app
+ng-model
+ng-controller
+ng-bind - display the data - Angular JS expression{{}}
+
+creating function
+events
+ng-repeat
+-->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp",[])
+        app.controller("control",function($scope){
+            $scope.item = []
+            
+            $scope.add = function(){
+                let prod = {name:$scope.pro,price:$scope.proprice};
+                $scope.item.push(prod);
+               
+            }
+            $scope.remove = function($index){
+                $scope.item.splice($index,2)
+            }
+        });
+    </script>
+
+</head>
+<body ng-app="myApp" ng-controller="control">
+    <div class="heading">
+        Product inventory system
+    </div>
+    <div class="form">
+        <form style="margin-bottom: 2%;">
+            <label>Enter Product Name</label><br>
+            <input type="text" ng-model="pro"><br>
+            <label>Enter Product Price</label><br>
+            <input type="text" ng-model="proprice"><br>
+            <button style="margin-top:2%;" ng-click="add()">Add Item</button>
+        </form>
+
+        <hr>
+        <table style="margin: 0 auto;" width="50%" border="black">
+            <tr style="background-color: black; color:white; padding: 2% 2% 2% 2%;">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="x in item">
+                <td>{{x.name}}</td>
+                <td>Rs.{{x.price}}</td>
+                <td><button ng-click="remove($index)" style="background-color: red;color:white;">DELETE</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
