@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body{
+  background-color: rgba(0,0,0,1);
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+/* nav{
+  z-index: 10;
+  background-color: rgba(0,0,0,1);
+  margin: 0% auto;
+  top: 0;
+  overflow: hidden;
+  position: sticky;
+  text-align: center;
+  padding: 16px 16px;
+  font-size: 2.0rem;
+  font-weight: bold;
+  width: 100%;
+  align-items: center;
+} */
+/* 
+nav a{
+  display: inline;
+  margin: auto 4% auto auto;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  text-decoration: none;
+  transition: 1s;
+} */
+
+nav a:hover{
+  color: rgba(255,255,255,1);
+  text-shadow: 7px 7px 4px rgb(130, 130, 130);
+}
+
+.image{
+  float: left;
+  width: 4vw;
+  height: 4vw;
+}
+
+#home{
+  background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0, 0, 0, 1) 50vw), url('anime-fantasy-wallpaper-2560x768_69.jpg');
+  background-repeat: no-repeat;
+  width:100%;
+  height: 100vw;
+  position: absolute;
+}
+
+.home-content{
+  color: white;
+  font-size: 2rem;
+  margin-top: 4%;
+  text-align: center;
+}
+
+.icons{
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.icons i{
+  color: rgba(255,255,255,0.5);
+  transition: 1s;
+}
+
+.icons a i:hover{
+  color: rgba(255,255,255,1);
+  transform: rotate(45deg);
+}
+
+#about{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 20%
+  width: 100%;
+  height: 100vw;
+  margin-top: 780px;
+  position: absolute;
+
+}
+
+#about .flex-item-1{
+  margin-top: 20%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width:100%;
+  height: 40%;
+  background-color: rgb(31, 31, 31);
+}
+
+#about .col-1{
+  margin-top: 20%;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 4px;
+  color: white;
+}
+
+
+
+
+#about .row-1-sub{
+  margin-left: 2%;
+  margin-right: 2%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+#about .row-2-sub{
+  margin-left: 2%;
+  margin-right: 2%;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+#about .row-3-sub{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+
+
+.cardlist{
+  display: flex;
+  width: 80%;
+  height: 40%;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+}
+
+#about .cardlist .card{
+  width:20%;
+  height: 20vw;
+  background-color: aqua;
+}
+
+
+#work{
+  margin-top: 1800px;
+  width: 100%;
+  height: 70vw;
+  background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.2)), url('aesthetic-anime-17.jpg');
+  background-repeat: no-repeat;
+}
+
+.loco{
+  width: 100%;
+  height: 40%;
+  margin-top: 30%;
+}
+
+#footer{
+  margin-top: -%;
+  width: 100%;
+  height: 40vw;
+  background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.5)), url('29431520.jpg');
+}
