@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Megaplay 2023 Registration Form!</h1>
+    <br>
+    <form action="/server" method="post">
+      Name: <input type="text" name="Pname"><br><br>
+      Regno: <input type="text" name="PRegno"><br><br>
+
+Participating Event:
+      <Select name="event">
+<option>Acting</option>
+<option>Singing</option>
+
+      </Select><br><br>
+      Gender: <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> FeMale
+      <input type="radio" name="gender" value="Others"> Others<br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .form_div{
+            width: 33.3333333%;
+            color: white;
+            margin: 0 auto;
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+        .form_head h1{
+            text-align: center;
+        }
+        .form_body{
+            text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="form_div">
+        <div class="form_head">
+            <h1>User Registration Form</h1>
+        </div>
+        <div class="form_body">   
+            <form action="/server" method="post">
+                <input type="text" placeholder="Name" name="Pname" required><br><br>
+                <input type="password" placeholder="Password" name="Ppass" required><br><br>
+                <input type="text" placeholder="Age" name="Page" required><br><br>
+                <input type="tel" placeholder="Mobile Number" name="Pnum" required><br><br>
+                <input type="email" placeholder="Email" name="Pmail" required><br><br>
+                Gender
+                <input type="radio" name="Pgender" value="male"> Male <input type="radio" name="Pgender" value="male"> Female <br><br>
+                state
+                <select name="Pstate">
+                    <option>Kerala</option>
+                    <option>TamilNadu</option>
+                    <option>J&K</option>
+                </select><br><br>
+                skill
+                <input type="checkbox" name="Pskill" value="C++">C++
+                <input type="checkbox" name="Pskill" value="Java">Java
+                <input type="checkbox" name="Pskill" value="JavaScript">JavaScript
+                <input type="checkbox" name="Pskill" value="Python">Python<br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+    
