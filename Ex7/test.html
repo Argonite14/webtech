@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).keydown(function(event){
+                var man = $("#man");
+            var key = event.which;
+            switch(key){
+                case 37:
+                    man.css('transform','rotateY(180deg)');  
+                    man.animate({left:'-=5px'},1);
+                    break;
+                case 38:  //up
+                    man.css('transform','rotate(270deg)');  
+                    man.animate({top:'-=5px'},1);
+                    break;
+                case 39:  //right
+                    man.css('transform','rotate(0deg)');  
+                    man.animate({left:'+=5px'},1);
+                    break;
+                case 40:  //down
+                    man.css('transform','rotate(90deg)');
+                    man.animate({top:'+=5px'},1);
+                    break;
+            };
+            
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="man" style="position: absolute; left:5px; top:40px; width:80px; height:30">
+        <img src="output-onlinegiftools (1).gif"  height="200px" width="200px" alt="">
+    </div>
+    <div id="path">
+        
+    </div>
+</body>
+</html>
