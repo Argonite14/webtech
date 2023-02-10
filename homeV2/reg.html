@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="regstyle.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="shadow-lg" style="background-color: #041C32;">
+        <div class="w-screen mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-8">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="navlogo2.png" alt="Logo" class="h-12 w-12 mr-1" style="transform: scale(1.5);">
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1 place-content-center">
+                        <a href="home.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Home</a>
+                        <a href="about.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">About Conference</a>
+                        <a href="themes.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Conference Theme</a>
+                        <a href="committee.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Committee</a>
+                        <a href="keynote.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Keynote Speakers</a>
+                        <a href="reg.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Registration Details</a>
+                        <a href="contact.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300">Contact Us</a>
+
+                    </div>
+                </div>
+            
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul style="color: #fff;">
+                <li><a href="home.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About Conference</a></li>
+                <li><a href="themes.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Conference Theme</a></li>
+                <li><a href="committee.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Committee</a></li>
+                <li><a href="keynote.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Keynote Speakers</a></li>
+                <li><a href="reg.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Registration Details</a></li>
+                <li><a href="contact.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+    <section id="img-text" style="margin-top: 2%;">
+        <div style="margin: 2%; margin-top: 0; margin-bottom: 0; width: 100%;">
+            <h1 style="font-size: 3em;">Registration Details</h1>
+        </div>
+        <table style="margin: 2%;">
+            <thead>
+                <tr>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Events</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Events">Last date for manuscript submission</td>
+                    <td data-label="Due Date">15th May 2023</td>
+
+                </tr>
+                <tr>
+                    <td scope="row" data-label="Events">Notification of manuscript acceptance</td>
+                    <td data-label="Due Date">15th June 2023</td>
+
+                </tr>
+                <!-- <tr>
+                    <td scope="row" data-label="Account">Registration starts on</td>
+                    <td data-label="Due Date">01-03-2021</td>
+
+                </tr>
+                <tr>
+                    <td scope="row" data-label="Acount">Revised version of manuscript submission</td>
+                    <td data-label="Due Date">07-04-2021</td>
+
+                </tr> -->
+                <tr>
+                    <td scope="row" data-label="Events">Last date for registration and Camera-Ready Paper Submission</td>
+                    <td data-label="Due Date">15th July 2023</td>
+
+                </tr>
+                <tr>
+                    <td scope="row" data-label="Events">Conference dates</td>
+                    <td data-label="Due Date">24th - 25th August 2023</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table style="margin: 2%;">
+            <thead>
+                <tr>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Deadline</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Industrial Delegates</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Academicians</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Research Scholars/PG
+                        Students</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Overseas Delegates</th>
+                    <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Listeners/Audience</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Deadline">On-Time Registration</td>
+                    <td data-label="Industrial Delegates">Rs.7500</td>
+                    <td data-label="Academicians">Rs.7000</td>
+                    <td data-label="Research Scholars/PG Students">Rs.6500</td>
+                    <td data-label="Overseas Delegates">US$ 250</td>
+                    <td data-label="Listeners/Accompanying Person">Rs.2000</td>
+
+                </tr>
+                <tr>
+                    <td scope="row" data-label="Deadline">Late Registration</td>
+                    <td data-label="Industrial Delegates">Rs.8000</td>
+                    <td data-label="Academicians">Rs.8000</td>
+                    <td data-label="Research Scholars/PG Students">Rs.7500</td>
+                    <td data-label="Overseas Delegates">US$ 300</td>
+                    <td data-label="Listeners/Accompanying Person">Rs.2000</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+        <div style="margin: 2%;">
+            <h4 style="font-weight: 600;">Call for Papers</h4><br>
+            <p align="justify">
+                ICNADBE 2023is an international conference where theory, practices, and applications of
+Biomedical devices and related topics are presented and discussed. Original contributions are
+solicited on topics covered under broad areas such as (but not limited to):
+            </p>
+            <br>
+            <table style="margin: 2%;">
+                <thead>
+                    <tr>
+                        <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Events</th>
+                        <th style="background-color: rgb(74, 74, 74); color: white;" scope="col">Date</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Events">Paper submission deadline</td>
+                        <td data-label="Due Date">15th May 2023</td>
+    
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="Events">Paper Acceptance Intimation</td>
+                        <td data-label="Due Date">15th June 2023 Onwards</td>
+    
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="Events">Last date for registration and Camera-Ready Paper Submission</td>
+                        <td data-label="Due Date">15th July 2023</td>
+    
+                    </tr>
+                    <tr>
+                        <td scope="row" data-label="Events">Date of Conference</td>
+                        <td data-label="Due Date">24th - 25th August 2023</td>
+    
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="font-weight: 600;">Evaluation Process</h4><br>
+            <p align="justify">
+                Selection is based on peer review by eminent experts in the respective fields. <br>
+                <br>
+                <li>Originality</li> <br>
+                <li>Significance</li> <br>
+                <li>Contribution to the area of research</li> <br>
+                <li>Technical quality</li> <br>
+
+            </p>
+            <br>
+            <h4 style="font-weight: 600;">Author Guidlines</h4><br>
+            <p align="justify">
+                Papers on original research work are invited on topics related to the title of the conference
+from researchers, professionals, industrialists, and academicians. Full paper in English (MSWord, Times New Roman 12, double spaced, A4 size) covering the objectives of the paper,
+methodology adopted, major findings and conclusions has to be sent on or before 15TH May,
+2023 to icnadbe2023@gmail.com. Author(s) affiliation, address for communication, e-mail
+addresses, and phone/fax numbers are to be included. At least one author of the paper
+should register for the conference. Selected papers with registration fee receipt will only be
+entertained for presentation and publication. Papers presented in conference will be
+published in Springer and IEEE Conference series (Scopus Indexed).
+
+            </p>
+            <br>
+            <h4 style="font-weight: 600;">Submission Instructions</h4><br>
+            <p align="justify">The following instructions should be followed to make a successful submission: <br>
+               <br> Paper Size: <br>
+                All submissions should be written in English with a maximum paper length of eight (8)
+                printed pages including figures and references. Papers exceeding 8 pages will not be
+                accepted at ICNADBE 2023. <br><br>
+                Paper Template
+                <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx"><img style="border-radius: 20%;" src="Untitled design (1).png" alt=""> for MS Word Template </a>
+                <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/conference-latex-template_10-17-19.zip"><img style="border-radius: 20%;" src="Untitled design (2) (1).png" alt=""> for LaTex Template </a>
+            </p>
+            <br>
+            <p align="justify">
+               <b> Paper Format:</b> <br><br>
+NOTE: Manuscripts that do not conform to the formatting guidelines will be removed from
+further consideration without review.
+<br><br><b>Submission Method</b><br><br>
+Papers should be submitted via Email to icnadbe2023@gmail.com. <br><br><b>ICNADBE 2023 Submission Policies: </b><br><br>
+Papers that do not comply with the template or number of pages will be rejected without
+revision.
+Papers that fall out of conference scope will be rejected without revision.
+Papers with high plagiarism will be rejected without revision.
+All accepted papers should be presented.
+Authors of accepted papers cannot be changed.
+Accepted papers should be revised according to the review comments in order to proceed
+to the further registration step.
+<br><br><b> Publication Policies: </b><br><br>
+Papers are reviewed on the basis that they do not contain plagiarized material and have not
+been submitted to any other conference at the same time (double submission).
+<br><br><b>PLEASE NOTE:</b><br><br>
+To be published in the ICNADBE 2023 Conference Proceedings and to be eligible for
+publication in IEEEXplore® and Springer, an author of an accepted paper is required to
+register for the conference at the full (IEEE member or non-member) rate and the paper
+must be presented by an author of that paper at the conference, who is qualified both to
+present and answer questions. The registration fees must be paid prior to uploading the
+final IEEE and springer formatted, publication-ready version of the paper. Accepted and
+presented papers will be published in the IEEE and Springer Conference Proceedings. In case
+of any malpractice, IEEE and Springer holds the right to reject the paper at any stage.
+            </p>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col" style="margin-top: 1%;">
+                    <ul>
+                        <li><a href="">About Conference</a></li><br>
+                        <li><a href="">Executive Committee</a></li><br>
+                        <li><a href="">International Advisory Committee</a></li><br>
+                        <li><a href="">Keynote Speakers</a></li><br>
+                        <li><a href="">Contact</a></li><br>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" style="margin-top: 1%;">
+                    <ul>
+                        <li><a href="">Conference Themes</a></li><br>
+                        <li><a href="">National Advisory Committee</a></li><br>
+                        <li><a href="">Organizing Committee</a></li><br>
+                        <li><a href="">Registration Details</a></li><br>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4>
+                        Contact us
+                    </h4>
+                    <p style="color: #ECB365;">
+                        Karunya Institute of Technology and Sciences,<br>
+                        (Deemed to be University),<br>
+                        Karunya Nagar,<br>
+                        Coimbatore - 641 114,<br>
+                        Tamil Nadu, India <br>
+                    </p>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-google-plus"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 3%;">
+            <div class="row">
+
+            </div>
+    </footer>
+
+</body>
+
+</html>

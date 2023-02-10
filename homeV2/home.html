@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+   
+</head>
+<body>
+    <nav class="shadow-lg" style="background-color: #041C32;">
+        <div class="w-screen mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-8">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <img src="navlogo2.png" alt="Logo" class="h-12 w-12 mr-1" style="transform: scale(1.5);">
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1 place-content-center">
+                        <a href="home.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Home</a>
+                        <a href="about.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">About Conference</a>
+                        <a href="themes.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Conference Theme</a>
+                        <a href="committee.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Committee</a>
+                        <a href="keynote.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Keynote Speakers</a>
+                        <a href="reg.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Registration Details</a>
+                        <a href="contact.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300">Contact Us</a>
+
+                    </div>
+                </div>
+            
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul style="color: #fff;">
+                <li><a href="home.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About Conference</a></li>
+                <li><a href="themes.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Conference Theme</a></li>
+                <li><a href="committee.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Committee</a></li>
+                <li><a href="keynote.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Keynote Speakers</a></li>
+                <li><a href="reg.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Registration Details</a></li>
+                <li><a href="contact.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @media (max-width: 800px){
+            .swiper {
+                width: 100%;
+                height: 25%;
+            }
+        }
+
+        @media (max-width: 800px){
+            .slide-div{
+                height: 160px;
+            }
+            .slide-div p{
+                font-size: 0.5rem;
+            }
+        }
+
+        
+      </style>
+    </head>
+  
+    <body>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url('slide1pic.jpg'); background-size: cover;">
+            <div class="slide-div" style="width:50%" >
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-col text-center w-full mb-20 items-center">
+                        <h1  class="text-3xl font-medium title-font mb-4 text-white sm:text-xs w-72 -mt-20 lg:text-4xl">ICNADBE - 2023</h1>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-3xl text-white sm:text-xs lg:text-2xl">1st International Conference on Novel Approaches and Developments in Biomedical Engineering
+                            Organized by:
+                            Department of Biomedical Engineering
+                            Karunya Institute of Technology and Sciences, Coimbatore</p>
+                      </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('slide2pic.jpg'); background-size: cover;">
+            <div class="slide-div" style="margin:  0%; width:50%" >
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-col text-center w-full mb-20 items-center">
+                        <h1 class="font-medium title-font mb-4 text-white sm:text-xs -mt-10 lg:text-4xl">ICNADBE - 2023</h1>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white sm:text-xs lg:text-2xl">24th - 25th August 2023</p>
+                      </div>
+                    </div>
+                </section>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next" style="color: rgba(255,255,255,0.5);"></div>
+        <div class="swiper-button-prev" style="color: rgba(255,255,255,0.5);"></div>
+      </div>
+  
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          effect: 'fade',
+          fadeEffect: {
+          crossFade: true
+          },
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+     <!-- Required font awesome
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+     <style>
+       .carousel-open:checked+.carousel-item {
+         position: static;
+         opacity: 100;
+       }
+
+       .carousel-item {
+         -webkit-transition: opacity 1s ease-out;
+         transition: opacity 1s ease-out;
+       }
+
+       #carousel-1:checked~.control-1,
+       #carousel-2:checked~.control-2,
+       #carousel-3:checked~.control-3 {
+         display: block;
+       }
+
+       .carousel-indicators {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         position: absolute;
+         bottom: 2%;
+         left: 0;
+         right: 0;
+         text-align: center;
+         z-index: 10;
+       }
+
+       #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+       #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+       #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+         color: #2b6cb0;
+         /*Set to match the Tailwind colour you want the active one to be */
+       }
+     </style>
+
+     <div class="carousel relative rounded relative overflow-hidden shadow-xl">
+       <div class="carousel-inner relative overflow-hidden w-full">
+         <!--Slide 1-->
+         <!-- <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+           checked="checked">
+         <div class="carousel-item absolute opacity-0 bg-center" style="height:500px; background-image: url(https://mdbootstrap.com/img/new/slides/052.jpg)">
+
+         </div>
+         <label for="carousel-3"
+         style="background-color: rgba(0,0,0,0.5)" class="control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto flex justify-center content-center"><i
+             class="fas fa-angle-left mt-3"></i></label>
+         <label for="carousel-2"
+         style="background-color: rgba(0,0,0,0.5)"  class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+             class="fas fa-angle-right mt-3"></i></label> -->
+
+         <!--Slide 2-->
+         <!-- <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+         <div class="carousel-item absolute opacity-0 bg-center" style="height:500px; background-image: url(https://mdbootstrap.com/img/new/slides/043.jpg)">
+         </div>
+         <label for="carousel-1"
+         style="background-color: rgba(0,0,0,0.5)" class=" control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"><i
+             class="fas fa-angle-left mt-3"></i></label>
+         <label for="carousel-3"
+         style="background-color: rgba(0,0,0,0.5)" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+             class="fas fa-angle-right mt-3"></i></label> -->
+
+         <!--Slide 3-->
+         <!-- <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+         <div class="carousel-item absolute opacity-0" style="height:500px; background-image: url(https://mdbootstrap.com/img/new/slides/054.jpg)">
+         </div>
+         <label for="carousel-2"
+         style="background-color: rgba(0,0,0,0.5)"class="control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"><i
+             class="fas fa-angle-left mt-3"></i></label>
+         <label for="carousel-1"
+         style="background-color: rgba(0,0,0,0.5)" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+             class="fas fa-angle-right mt-3"></i></label> -->
+
+         <!-- Add additional indicators for each slide-->
+         <!-- <ol class="carousel-indicators">
+           <li class="inline-block mr-3">
+             <label for="carousel-1"
+               class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+           </li>
+           <li class="inline-block mr-3">
+             <label for="carousel-2"
+               class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+           </li>
+           <li class="inline-block mr-3">
+             <label for="carousel-3"
+               class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+           </li>
+         </ol>
+
+       </div>
+     </div> -->
+
+    <!-- <div id="logo">
+        
+    </div>
+    <div id="navbar">
+        <a href="" style="margin-right: 20px; float: left;padding:1% 2%;background-color: #ECB365; border-bottom-right-radius: 10px; border-top-right-radius: 10px;"><img src="navlogo.png" width="300px" alt=""></a>
+        <a href="home.html" class="links">Home</a>
+        <a href="" class="links">About Conference</a>
+        <a href="" class="links">Conference Theme</a>
+        <div class="dropdown" style="padding: 17px 20px;">
+          <button class="dropbtn">Committee -->
+            <!-- <span><i class="fa fa-caret-down"></i></span> -->
+          <!-- </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <a href="" class="links">Committee</a> -->
+        <!-- <a href="" class="links">Keynote Speakers</a>
+        <a href="" class="links">Registration Details</a>
+        <a href="" class="links">Contact Us</a>
+        
+    </div>
+    <div class="swiper mySwiper" style="width: 100%;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+                <div class="slide1-text">
+                  <div class="text">
+                    <h3>ICNADBE - 2021</h3>
+                    <h3>1st International Conference on Novel Approaches and Developments in Biomedical Engineering</h3>
+                    <h3>Organized by:
+                      Department of Biomedical Engineering <br>
+                      Karunya Institute of Technology and Sciences, Coimbatore</h3> -->
+                        <!-- 
+                        
+                        Organized by:
+                        Department of Biomedical Engineering
+                        Karunya Institute of Technology and Sciences, Coimbatore -->
+                  <!-- </div>
+                    
+                </div>
+                <img src="slide1pic.jpg">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div style="width:100%;">
+              <div class="slide1-text" style="width: 100%;">
+                <div class="text" style="width: 85%;">
+                  <h1>ICNADBE - 2021</h1>
+                  <h2 style="margin-top: 5%;">22 and 23 April 2021</h2>
+                  
+                      
+                </div>
+                  
+              </div>
+              <img src="slide2pic.jpg">
+          </div>
+            <!-- <img src="slide2pic.jpg" alt=""> -->
+          
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-pagination"></div>
+      </div>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          parallax: true,
+          centeredSlides: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          effect: 'fade',
+          fadeEffect: {
+          crossFade: true,
+          
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script> -->
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="img-text.jpg">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <!-- <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">About karunya</h1> -->
+              
+              <!-- <p class="leading-relaxed">Karunya Institute of Technology and Sciences is an Institution with a social concern.
+                 Our mission is to raise scientists and entrepreneurs to find solutions by developing products in the areas of food, water,
+                 health care and energy with the best skills to solve the problems of Humanity.</p>
+               -->
+               <p class="leading-relaxed">
+                Biomedical Engineering is a multidisciplinary field that blends biology and engineering. This discipline
+encompasses the profound knowledge of biological principles in the realm of engineering design.
+The department of Biomedical Engineering was established in the year 2009 and has maintained an
+exceptional track record in academics, placement, industrial training and research activities.
+Biomedical engineering has a direct effect on human life thus making it different and attractive from
+other streams of engineering. The ever-increasing demand for Biomedical Engineers is pertinent to
+our society’s affinity towards efficient and convenient healthcare. Biomedical engineering being a
+interdisciplinary field has almost endless possibilities and there is growing need of large scale
+investments to endorse quality education to train biomedical engineers to provide innovative and
+cost effective health care solutions.
+               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col" style="margin-top: 1%;">
+            <ul>
+              <li><a href="">About Conference</a></li><br>
+              <li><a href="">Executive Committee</a></li><br>
+              <li><a href="">International Advisory Committee</a></li><br>
+              <li><a href="">Keynote Speakers</a></li><br>
+              <li><a href="">Contact</a></li><br>
+            </ul>
+          </div>
+        
+        
+          <div class="footer-col" style="margin-top: 1%;">
+            <ul>
+              <li><a href="">Conference Themes</a></li><br>
+              <li><a href="">National Advisory Committee</a></li><br>
+              <li><a href="">Organizing Committee</a></li><br>
+              <li><a href="">Registration Details</a></li><br>
+            </ul>
+          </div>
+        
+        
+          <div class="footer-col" >
+            <h4>
+              Contact us
+            </h4>
+            <p style="color: #ECB365;">
+              Karunya Institute of Technology and Sciences,<br>
+              (Deemed to be University),<br>
+              Karunya Nagar,<br>
+              Coimbatore - 641 114,<br>
+              Tamil Nadu, India <br>
+            </p>
+          </div>
+        
+       
+          <div class="footer-col" >
+            <h4>Follow us</h4>
+            <div class="social-links">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-google-plus"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+      </div>
+      <hr style="margin-top: 3%;">
+      <div class="row">
+
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</body>
+</html>

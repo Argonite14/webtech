@@ -1,0 +1,340 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato',sans-serif;
+}
+
+
+
+#navbar{
+    overflow: hidden;
+    background-color: #041C32;
+    font-family: 'Lato',sans-serif;
+    width: 100%;
+    
+}
+
+.links{
+    float: left;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    padding: 31px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    position: sticky;
+    transition: 0.5s;    
+}
+
+
+
+.links:hover{
+    color: #42C2FF;
+    text-decoration: 0.2px underline #f56767 ;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    transform: scale(1.2);
+}
+
+#navbar a:active{
+    background-color: #42C2FF;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide1-text{
+    color: #fff;
+    text-align: left;
+    padding: 100px;
+    font-family: 'Lato',sans-serif;
+    position: absolute;
+}
+
+.slide1-text h1,h2{
+    text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    transition: 0.5s;
+    margin: 0;
+}
+  
+.dropdown:hover .dropbtn {
+    color: #42C2FF;
+    text-decoration: 0.2px underline #f56767 ;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    transform: scale(1.2);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ECB365;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    color: #fff;
+    background-color: #041C32;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container{
+    
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+#img-text{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lato',sans-serif;
+
+    margin: 6%;
+}
+#img-text .image{
+    width: 50%;
+}
+
+#img-text .text{
+    width: 50%;
+    text-align: left;
+}
+
+#img-text .text p{
+    font-size: 1.2rem;
+}
+
+.footer{
+    font-family: 'Lato',sans-serif;
+    background-color: #041C32;
+    padding: 70px 0;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+  
+
+.footer-col{
+    width: 25%;
+    border-right: 1px solid #ECB365;
+    margin-left: 4%;
+    position: relative;
+}
+
+
+.footer-col ul li a{
+    margin-top: 100px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-decoration: underline 4px #f56767;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: relative;
+    left: 0;
+    bottom: -10px;
+    background-color: #f56767;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.social-links i{
+    margin: 1%;
+    color: #041C32;
+    font-size: 1.5rem;
+    background-color: #ECB365;
+    padding: 1%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.social-links i:hover{
+    transform: scale(1.5);
+}
+
+.footer-col ul li a:hover{
+    color: #42C2FF;
+    text-decoration:#ECB365 underline;
+}
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width: 800px){
+  table {
+    border: 0;
+    
+    
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  
+  }
+    .row{
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-col{
+        width: 100%;
+        text-align: left;
+        border-right: none;
+        position: relative;
+    }
+
+    .footer-col ul{
+        margin-top: 50px;
+        color: #fff;
+        text-decoration: none;
+        list-style: square;
+        text-align: left;
+    }
+}

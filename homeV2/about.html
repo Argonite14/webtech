@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <nav class="shadow-lg" style="background-color: #041C32;">
+    <div class="w-screen mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-8">
+                <div>
+                    <!-- Website Logo -->
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <img src="navlogo2.png" alt="Logo" class="h-12 w-12 mr-1" style="transform: scale(1.5);">
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1 place-content-center">
+                    <a href="home.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Home</a>
+                    <a href="about.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">About Conference</a>
+                    <a href="themes.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Conference Theme</a>
+                    <a href="committee.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Committee</a>
+                    <a href="keynote.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Keynote Speakers</a>
+                    <a href="reg.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300 transition duration-300">Registration Details</a>
+                    <a href="contact.html" class="py-4 px-2 space-x-1.0 > * + * text-white font-semibold hover:text-[#ECB365] hover:underline underline-offset-8 transition duration-300">Contact Us</a>
+
+                </div>
+            </div>
+        
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                    x-show="!showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            </div>
+        </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+        <ul style="color: #fff;">
+            <li><a href="home.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Home</a></li>
+            <li><a href="about.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About Conference</a></li>
+            <li><a href="themes.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Conference Theme</a></li>
+            <li><a href="committee.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Committee</a></li>
+            <li><a href="keynote.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Keynote Speakers</a></li>
+            <li><a href="reg.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Registration Details</a></li>
+            <li><a href="contact.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+        </ul>
+    </div>
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</nav>
+    
+    <!-- <section id="img-text">
+      
+    </section> -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex w-full mb-20 flex-wrap">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4" style="width: 100%;font-size: 2.5rem; text-align: center; margin-bottom: 2%; ">About Department of Biomedical Engineering</h1>
+          <!-- <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Biomedical Engineering is a multidisciplinary field that blends medical science and engineering. This discipline encompasses the profound knowledge of medical principles in the realm of engineering design. The department of Biomedical Engineering was established in the year 2009 and offer B.Tech & M.Tech Biomedical Engineering courses. Our curriculum is carefully designed to ensure that the students develop a strong base in biomedical engineering and also to familiarise them with other engineering disciplines which could equip them to work on a multidisciplinary innovative platform.</p> -->
+          <p class="lg:pl-6 lg:w-4/5 mx-auto leading-relaxed text-base text-justify">Biomedical Engineering is a multidisciplinary field that blends biology and engineering. This discipline
+            encompasses the profound knowledge of biological principles in the realm of engineering design.
+            The department of Biomedical Engineering was established in the year 2009 and has maintained an
+            exceptional track record in academics, placement, industrial training and research activities.
+            Biomedical engineering has a direct effect on human life thus making it different and attractive from
+            other streams of engineering. The ever-increasing demand for Biomedical Engineers is pertinent to
+            our society’s affinity towards efficient and convenient healthcare. Biomedical engineering being a
+            interdisciplinary field has almost endless possibilities and there is growing need of large scale
+            investments to endorse quality education to train biomedical engineers to provide innovative and
+            cost effective health care solutions.</p>
+        </div>
+        <!-- <div class="flex flex-wrap md:-m-2 -m-1"> -->
+          <div class="flex flex-wrap" style="margin:0 auto">
+            <div class="md:p-2 p-1 w-1/2">
+              <img alt="gallery" class="w-full object-cover h-full object-center block" src="biomedical-02.jpg.pagespeed.ce.voHEzuGzWa.jpg">
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img alt="gallery" class="w-full object-cover h-full object-center block" src="biomedical-01.jpg.pagespeed.ce.iiVkbKBQES.jpg">
+            </div>
+            <div class="md:p-2 p-1 w-full">
+              <img alt="gallery" class="w-full h-full object-cover object-center block" src="about-karunya.jpg.pagespeed.ce.5ZO_6dibSK.jpg">
+            </div>
+          </div>
+          <div class="flex w-full mb-20 flex-wrap">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4" style="margin-top: 2%; width: 100%; text-align: center; margin-bottom: 2%;">About the conference</h1>
+            <!-- <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">This conference aims to bring together eminent scientists, scholars, research fellow, students, biomedical industry professionals, members of associations, policy makers and academic professionals from different countries across the globe to exchange and share their experiences and research results on all aspects of Biomedical Engineering. The conference aims to empower future generations in different fields of Biomedical Engineering to explore exciting research outcomes that lie in tune with the objectives and theme of this exciting event. It further helps you enhance your understanding of commercial, scientific and regulatory issues that affect strategic decision making in the biomedical sector.
+              Each track will witness technical talks by eminent personalities from across the nation to ignite creative thinking and kindle research solutions.
+              All submitted abstracts/ papers / posters will go through a blind peer review process and accepted manuscripts will be published in conference proceedings.
+              Selected conference papers will be published in special / Scopus indexed journals associated with this conference. Associated journals will allocate a special / regular issue for papers submitted to this conference.</p>
+             -->
+             <p class="lg:pl-6 lg:w-4/5 mx-auto leading-relaxed text-base text -justify">This conference aims to bring together eminent scientists, scholars, research fellows, students,
+              biomedical industry professionals, members of associations, policy makers and academic
+              professionals from different countries across the globe to exchange and share their experiences and
+              research results on all aspects of Biomedical Engineering. The conference aims to empower future
+              generations in different fields of Biomedical Engineering to explore exciting research outcomes that
+              lie in tune with the objectives and theme of this exciting event. It further helps you enhance your
+              understanding of commercial, scientific and regulatory issues that affect strategic decision making in
+              the biomedical sector.<br><br>
+              Each track will witness technical talks by eminent personalities from across the nation to ignite
+              creative thinking and kindle research solutions. <br><br>
+              All submitted abstracts/ papers will go through a blind peer review process and accepted
+              manuscripts will be published in conference proceedings. <br><br>
+              Selected conference papers will be published in special / Scopus indexed journals associated with
+              this conference. Associated journals will allocate a special / regular issue for papers submitted to this
+              conference.
+              </p> 
+          </div>
+          <div class="flex w-full mb-20 flex-wrap">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4" style="margin-top: -2%; width: 100%; text-align: center; margin-bottom: 2%;">Call for Papers</h1>
+            <!-- <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">This conference aims to bring together eminent scientists, scholars, research fellow, students, biomedical industry professionals, members of associations, policy makers and academic professionals from different countries across the globe to exchange and share their experiences and research results on all aspects of Biomedical Engineering. The conference aims to empower future generations in different fields of Biomedical Engineering to explore exciting research outcomes that lie in tune with the objectives and theme of this exciting event. It further helps you enhance your understanding of commercial, scientific and regulatory issues that affect strategic decision making in the biomedical sector.
+              Each track will witness technical talks by eminent personalities from across the nation to ignite creative thinking and kindle research solutions.
+              All submitted abstracts/ papers / posters will go through a blind peer review process and accepted manuscripts will be published in conference proceedings.
+              Selected conference papers will be published in special / Scopus indexed journals associated with this conference. Associated journals will allocate a special / regular issue for papers submitted to this conference.</p>
+             -->
+             <p class="lg:pl-6 lg:w-4/5 mx-auto leading-relaxed text-base text-justify">
+              ICNADBE 2023 is an international conference where theory, practices, and applications of
+              Biomedical devices and related topics are presented and discussed. Original contributions are
+              solicited on topics covered under broad areas such as (but not limited to): 
+            </p> 
+            <h2 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-2/3 lg:mb-0 mb-4" style="margin-top: 2%; width: 100%; text-align: center; margin-bottom: 2%;">Importent Dates:</h2>
+            <div class="sm:flex place-items-center lg:grid grid-cols-1 place-content-center w-full mr-7 ">
+              <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5 lg:pl-6">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                  <div class="overflow-hidden items-center">
+                    <table class="min-w-full">
+                      <thead class="bg-white border-b">
+                        <tr>
+                          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Paper submission deadline
+                          </th>
+                          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            15th May 2023
+                          </th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="bg-gray-100 border-b">
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            Paper Acceptance Intimation
+                          </td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            15th June 2023 Onwards
+                          </td>
+                          
+                        </tr>
+                        <tr class="bg-white border-b">
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            Last date of registration and Camera-Ready
+Paper Submission
+                          </td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            15th July 2023
+                          </td>
+                          
+                        </tr>
+                        <tr class="bg-gray-100 border-b">
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            Date of Conference
+                          </td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            24th – 25th August 2023
+                          </td>
+                          
+                        </tr> 
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- component -->
+          <!-- <div class="flex flex-wrap w-1/2">
+            <div class="md:p-2 p-1 w-full">
+              <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+            </div>
+          </div> -->
+        <!-- </div>
+      </div> -->
+      </div>
+
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col" style="margin-top: 1%;">
+            <ul>
+              <li><a href="">About Conference</a></li><br>
+              <li><a href="">Executive Committee</a></li><br>
+              <li><a href="">International Advisory Committee</a></li><br>
+              <li><a href="">Keynote Speakers</a></li><br>
+              <li><a href="">Contact</a></li><br>
+            </ul>
+          </div>
+        
+        
+          <div class="footer-col" style="margin-top: 1%;">
+            <ul>
+              <li><a href="">Conference Themes</a></li><br>
+              <li><a href="">National Advisory Committee</a></li><br>
+              <li><a href="">Organizing Committee</a></li><br>
+              <li><a href="">Registration Details</a></li><br>
+            </ul>
+          </div>
+        
+        
+          <div class="footer-col" >
+            <h4>
+              Contact us
+            </h4>
+            <p style="color: #ECB365;">
+              Karunya Institute of Technology and Sciences,<br>
+              (Deemed to be University),<br>
+              Karunya Nagar,<br>
+              Coimbatore - 641 114,<br>
+              Tamil Nadu, India <br>
+            </p>
+          </div>
+        
+       
+          <div class="footer-col" >
+            <h4>Follow us</h4>
+            <div class="social-links">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-google-plus"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+      </div>
+      <hr style="margin-top: 3%;">
+      <div class="row">
+
+      </div>
+    </footer>
+    
+</body>
+</html>
