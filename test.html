@@ -20,12 +20,21 @@
             margin: 0;
             padding: 0;
         }
+        #nav {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 0px 0px 10px 10px;
+background: rgba(195, 0, 47, 0.90);
+        }
 
         #map {
             position: absolute;
             top: 0;
             bottom: 0;
             width: 100%;
+            height: 100%;
         }
 
         .map-overlay {
@@ -47,20 +56,52 @@
         }
 
         #map > div.mapboxgl-control-container > div.mapboxgl-ctrl-top-left > div > div > div{
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgb(0, 0, 0);
             border-radius: 5%;
         }
+/* #map > div.mapboxgl-control-container > div.mapboxgl-ctrl-top-left > div > div > div > div.mapbox-directions-instructions */
+        #info{
+            position: absolute;
+            display: flex;
+            width: 30%;
+            height: 30%;
+            background-color: rgb(0, 0, 0);
+            bottom: 0%;
+            border-top-right-radius: 50px;
+            padding: 2%;
+        }
+
+        /* #direction{
+            background-color: #000;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #time-to-reach{
+            background-color: #000;
+            color: rgba(255, 255, 255, 0.9);
+        } */
+        
+        
+        
+
+        
+        
     </style>
     <title>Nissan Concept</title>
 </head>
 <!-- #map > div.mapboxgl-control-container > div.mapboxgl-ctrl-top-left > div > div > div > div.mapbox-directions-instructions > div > ol > li:nth-child(1) -->
 <body>
-
+    
     <div id="map">
 
     </div>
 
+    <div id="nav">
+        
+    </div>
 
+    
+    
 
     <script>
         let longitude, latitude;
@@ -295,7 +336,7 @@
                     //     'source-layer': 'poi_label',
                     //     type: 'circle'
                     // });
-
+                    info.appendChild(document.querySelector('#map > div.mapboxgl-control-container > div.mapboxgl-ctrl-top-left > div > div > div'));
 
                 });
 
@@ -307,6 +348,9 @@
 
 
     </script>
+    <div id="info">
+        
+    </div>
 
 </body>
 
