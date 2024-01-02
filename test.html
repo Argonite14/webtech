@@ -60,7 +60,7 @@
 
                 var dist;
 
-dist = Math.abs(latitude - 8.504476105148203)+Math.abs(longitude - 76.90997654098217) ;
+dist = Math.abs(8.894258897717894 - 8.504476105148203)+Math.abs(76.62836055937109 - 76.90997654098217) ;
 console.log("distance: ",dist);
 
 const data = [
@@ -68,12 +68,22 @@ const data = [
     [0,8.5044802478871, 76.90999827052875],
     [0,10.051607494288493, 76.32069969997653],
     [0,8.883932543917286, 76.63998702942433],
+    [0,10.077087994467687, 76.33745968831994],
+    [0,9.928146279956026, 76.31803490733631],
+    [0,9.349973830821783, 76.59389822942435],
+    [0,9.638101652290757, 76.54416884108095],
+    [0,10.738718964392294, 76.64067972942435],
+    [0,10.501400607622807, 76.26029809997655],
+    [0,9.46784926929099, 76.52964789997655],
+    [0,10.99049202912677, 76.17262909997653],
+    [0,9.27784040732975, 76.75504119997653],
 ];
 
 function distmap(data){
     var l = [];
     for(let i=0;i<data.length;i++){
         data[i][0]=(Math.abs(latitude - data[i][1])+Math.abs(longitude - data[i][2]));
+        console.log(data[i]);
     }
 
     min = data[0]
@@ -88,7 +98,7 @@ function distmap(data){
 ;
 let cords = distmap(data);
 
-
+console.log("test: ",cords);
 
 
         const currDate = new Date();
@@ -105,8 +115,8 @@ let cords = distmap(data);
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXJnb25pdGUiLCJhIjoiY2xvM3lmb3hvMWFrZTJxbzNjNXlqMmJqNSJ9.FhhHgEABIZAF24By-Dekhw';
         const map = new mapboxgl.Map({
             container: 'map',
-            center: [longitude,latitude],
-            zoom: 18.7,
+            center: [longitude,latitude],//[longitude,latitude],
+            zoom: 19.7,
             // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
             style: 'mapbox://styles/mapbox/standard',
             pitch: 80, // starting pitch
@@ -117,7 +127,8 @@ let cords = distmap(data);
 
         
 
-
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl());
 
         
 
@@ -195,7 +206,7 @@ let cords = distmap(data);
         var directions = new MapboxDirections({
             accessToken: mapboxgl.accessToken,
             unit:'metric',
-            // controls: {inputs:false},
+            controls: {inputs:false},
             interactive: false,
         })
         directions.setOrigin([longitude,latitude])
@@ -221,7 +232,7 @@ let cords = distmap(data);
                             'type': 'Feature',
                             'geometry': {
                                 'type': 'Point',
-                                'coordinates': [longitude,latitude] // icon position [lng, lat]
+                                'coordinates': [longitude,latitude]//[longitude,latitude] // icon position [lng, lat]
                             }
                         }
                     ]
